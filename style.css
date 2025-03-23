@@ -28,7 +28,8 @@ section {
   padding: 20px 10%;
   align-items: center;
   background: #0d0d0d;
-  flex-wrap: wrap; /* Allow wrapping of items on smaller screens */
+  flex-wrap: wrap;
+  /* Allow wrapping of items on smaller screens */
 }
 
 /* Logo */
@@ -64,8 +65,10 @@ section {
 @media (max-width: 768px) {
   .navbar {
     padding: 15px 5%;
-    flex-direction: row; /* Ensure items are aligned horizontally */
-    justify-content: center; /* Center align the items */
+    flex-direction: row;
+    /* Ensure items are aligned horizontally */
+    justify-content: center;
+    /* Center align the items */
   }
 
   /* Navbar links will remain in a row */
@@ -75,12 +78,15 @@ section {
   }
 
   .navbar nav a {
-    margin: 0 10px; /* Adjust space between links */
-    text-align: center; /* Ensure the links are centered */
+    margin: 0 10px;
+    /* Adjust space between links */
+    text-align: center;
+    /* Ensure the links are centered */
   }
 
   .hire-btn {
-    margin-left: 15px; /* Add some space between the button and the nav */
+    margin-left: 15px;
+    /* Add some space between the button and the nav */
   }
 }
 
@@ -93,12 +99,14 @@ section {
   align-items: center;
   background: linear-gradient(120deg, #1f0036, #290e5e);
   padding: 40px 10%;
-  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  flex-wrap: wrap;
+  /* Allow wrapping for smaller screens */
 }
 
 .home-content {
   flex: 1;
-  max-width: 60%; /* Limit content width on larger screens */
+  max-width: 60%;
+  /* Limit content width on larger screens */
 }
 
 .home-content h1 {
@@ -150,25 +158,30 @@ section {
 @media (max-width: 768px) {
   .home {
     padding: 30px 5%;
-    flex-direction: column; /* Stack content and image vertically */
+    flex-direction: column;
+    /* Stack content and image vertically */
     text-align: center;
   }
 
   .home-content {
-    max-width: 100%; /* Allow full width for the content */
+    max-width: 100%;
+    /* Allow full width for the content */
     text-align: center;
   }
 
   .home-content h1 {
-    font-size: 2rem; /* Reduce font size for mobile */
+    font-size: 2rem;
+    /* Reduce font size for mobile */
   }
 
   .buttons .btn {
-    padding: 8px 20px; /* Smaller button sizes */
+    padding: 8px 20px;
+    /* Smaller button sizes */
   }
 
   .home-image img {
-    max-width: 90%; /* Make image slightly larger */
+    max-width: 90%;
+    /* Make image slightly larger */
   }
 }
 
@@ -237,6 +250,7 @@ section {
 
 /* Mobile Styles */
 @media (max-width: 768px) {
+
   /* Stack the content for mobile */
   .about-container {
     flex-direction: column;
@@ -247,27 +261,32 @@ section {
   /* Adjust description */
   .about-description {
     max-width: 100%;
-    margin-left: 0; /* Remove left margin for mobile */
+    margin-left: 0;
+    /* Remove left margin for mobile */
   }
 
   /* Adjust stats layout */
   .stats {
     flex-direction: column;
     align-items: center;
-    gap: 20px; /* Add gap between stats items */
+    gap: 20px;
+    /* Add gap between stats items */
   }
 
   .stats div {
-    min-width: 200px; /* Adjust min width for mobile */
+    min-width: 200px;
+    /* Adjust min width for mobile */
   }
 
   /* Adjust font size for headings and description text */
   .about-text h2 {
-    font-size: 1.8rem; /* Slightly smaller heading on mobile */
+    font-size: 1.8rem;
+    /* Slightly smaller heading on mobile */
   }
 
   .about-description p {
-    font-size: 0.95rem; /* Smaller font for readability on small screens */
+    font-size: 0.95rem;
+    /* Smaller font for readability on small screens */
   }
 }
 
@@ -375,7 +394,8 @@ section {
   gap: 30px;
   flex-wrap: wrap;
   justify-content: center;
-  flex-direction: row; /* Horizontal layout by default */
+  flex-direction: row;
+  /* Horizontal layout by default */
 }
 
 /* Project Card */
@@ -387,7 +407,8 @@ section {
   color: white;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  margin-bottom: 20px; /* Adding space between cards */
+  margin-bottom: 20px;
+  /* Adding space between cards */
 }
 
 .project:hover {
@@ -428,21 +449,26 @@ section {
 /* Mobile Styles */
 @media (max-width: 768px) {
   .projects {
-    flex-direction: column; /* Stack the cards vertically on mobile */
-    gap: 20px; /* Reduce the gap between cards */
+    flex-direction: column;
+    /* Stack the cards vertically on mobile */
+    gap: 20px;
+    /* Reduce the gap between cards */
   }
 
   .project {
-    max-width: 100%; /* Make project cards take full width on mobile */
+    max-width: 100%;
+    /* Make project cards take full width on mobile */
     margin: 0 10px 20px 10px;
   }
 
   .project img {
-    max-height: 200px; /* Reduce image size for smaller screens */
+    max-height: 200px;
+    /* Reduce image size for smaller screens */
   }
 
   .project h3 {
-    font-size: 1rem; /* Reduce font size for better readability */
+    font-size: 1rem;
+    /* Reduce font size for better readability */
   }
 }
 
@@ -491,7 +517,6 @@ section {
 }
 
 
-
 /* Contact */
 .contact {
   padding: 60px 10%;
@@ -510,6 +535,8 @@ section {
 .contact-left {
   flex: 1;
   min-width: 300px;
+  max-width: 100%;
+  padding-right: 15px; /* Added right padding for form alignment */
 }
 
 .contact-left h2 {
@@ -531,6 +558,7 @@ section {
   border-bottom: 1px solid #555;
   color: white;
   font-size: 1rem;
+  width: 100%; /* Ensure inputs take up the full width */
 }
 
 .contact-left form textarea {
@@ -619,7 +647,7 @@ section {
 
   .info-item img {
     width: 25px;
-    height: 25px; /* Reduce icon size for mobile */
+    height: 25px;
   }
 
   /* Adjust margins and paddings for mobile */
@@ -643,4 +671,23 @@ section {
 .footer nav a {
   margin: 0 10px;
   color: #aaa;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  /* Adjust padding for mobile */
+  .footer {
+    padding: 20px 5%;
+  }
+
+  /* Ensure links stay horizontal and wrap if needed */
+  .footer nav {
+    display: flex;
+    justify-content: center; /* Center align the links */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  }
+
+  .footer nav a {
+    margin: 5px 10px; /* Slightly reduced margin to accommodate space */
+  }
 }
