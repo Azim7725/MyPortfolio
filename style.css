@@ -28,26 +28,63 @@ section {
   padding: 20px 10%;
   align-items: center;
   background: #0d0d0d;
+  flex-wrap: wrap; /* Allow wrapping of items on smaller screens */
 }
 
+/* Logo */
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
+  color: white;
+  margin-bottom: 5px;
+}
+
+/* Navbar Links */
+.navbar nav {
+  display: flex;
+  gap: 15px;
 }
 
 .navbar nav a {
-  margin: 0 15px;
   color: #aaa;
 }
 
+/* Hire Button */
 .hire-btn {
   background: #9f47ff;
   color: white;
+  margin-top: 10px;
   padding: 10px 20px;
   border: none;
   border-radius: 20px;
   cursor: pointer;
 }
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 5%;
+    flex-direction: row; /* Ensure items are aligned horizontally */
+    justify-content: center; /* Center align the items */
+  }
+
+  /* Navbar links will remain in a row */
+  .navbar nav {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .navbar nav a {
+    margin: 0 10px; /* Adjust space between links */
+    text-align: center; /* Ensure the links are centered */
+  }
+
+  .hire-btn {
+    margin-left: 15px; /* Add some space between the button and the nav */
+  }
+}
+
+
 
 /* Home */
 .home {
@@ -55,19 +92,24 @@ section {
   justify-content: space-between;
   align-items: center;
   background: linear-gradient(120deg, #1f0036, #290e5e);
+  padding: 40px 10%;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
 .home-content {
   flex: 1;
+  max-width: 60%; /* Limit content width on larger screens */
 }
 
 .home-content h1 {
   font-size: 3rem;
   margin: 20px 0;
+  color: white;
 }
 
 .home-content .description {
   margin-bottom: 20px;
+  color: white;
 }
 
 .buttons .btn {
@@ -102,6 +144,32 @@ section {
   height: auto;
   margin: 0 auto;
   display: block;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .home {
+    padding: 30px 5%;
+    flex-direction: column; /* Stack content and image vertically */
+    text-align: center;
+  }
+
+  .home-content {
+    max-width: 100%; /* Allow full width for the content */
+    text-align: center;
+  }
+
+  .home-content h1 {
+    font-size: 2rem; /* Reduce font size for mobile */
+  }
+
+  .buttons .btn {
+    padding: 8px 20px; /* Smaller button sizes */
+  }
+
+  .home-image img {
+    max-width: 90%; /* Make image slightly larger */
+  }
 }
 
 /* About Section */
@@ -167,19 +235,39 @@ section {
   margin-bottom: 5px;
 }
 
+/* Mobile Styles */
 @media (max-width: 768px) {
+  /* Stack the content for mobile */
   .about-container {
     flex-direction: column;
     align-items: flex-start;
+    gap: 20px;
   }
 
+  /* Adjust description */
   .about-description {
     max-width: 100%;
+    margin-left: 0; /* Remove left margin for mobile */
   }
 
+  /* Adjust stats layout */
   .stats {
     flex-direction: column;
     align-items: center;
+    gap: 20px; /* Add gap between stats items */
+  }
+
+  .stats div {
+    min-width: 200px; /* Adjust min width for mobile */
+  }
+
+  /* Adjust font size for headings and description text */
+  .about-text h2 {
+    font-size: 1.8rem; /* Slightly smaller heading on mobile */
+  }
+
+  .about-description p {
+    font-size: 0.95rem; /* Smaller font for readability on small screens */
   }
 }
 
@@ -272,6 +360,7 @@ section {
 .work {
   padding: 60px 10%;
   text-align: center;
+  background-color: #121212;
 }
 
 .work h2 {
@@ -286,24 +375,30 @@ section {
   gap: 30px;
   flex-wrap: wrap;
   justify-content: center;
+  flex-direction: row; /* Horizontal layout by default */
 }
 
+/* Project Card */
 .project {
   max-width: 380px;
   background: #1a1a1a;
   padding: 20px;
   border-radius: 12px;
   color: white;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px; /* Adding space between cards */
 }
 
 .project:hover {
   transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
+/* Project Image */
 .project img {
   width: 100%;
-  height: 100%;
+  height: auto;
   max-height: 250px;
   object-fit: cover;
   border-radius: 10px;
@@ -311,14 +406,44 @@ section {
   display: block;
 }
 
+/* Project Heading */
 .project h3 {
   margin-top: 15px;
   font-size: 1.2rem;
+  cursor: pointer;
+  text-decoration: underline;
+  color: #9f47ff;
 }
 
+.project h3:hover {
+  color: #7f36cc;
+}
+
+/* Project Paragraph */
 .project p {
   font-size: 0.95rem;
   color: #ccc;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .projects {
+    flex-direction: column; /* Stack the cards vertically on mobile */
+    gap: 20px; /* Reduce the gap between cards */
+  }
+
+  .project {
+    max-width: 100%; /* Make project cards take full width on mobile */
+    margin: 0 10px 20px 10px;
+  }
+
+  .project img {
+    max-height: 200px; /* Reduce image size for smaller screens */
+  }
+
+  .project h3 {
+    font-size: 1rem; /* Reduce font size for better readability */
+  }
 }
 
 /* Achievements Section */
@@ -459,17 +584,51 @@ section {
   font-weight: 600;
 }
 
+/* Mobile Styles */
 @media (max-width: 768px) {
+  /* Stacking content vertically for mobile */
   .contact-wrapper {
     flex-direction: column;
+    align-items: center; /* Center align the sections on mobile */
   }
 
+  /* Adjust form layout */
   .contact-left form {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Stack input fields in a single column */
   }
 
   .contact-left form button {
     grid-column: span 1;
+    padding: 12px 20px; /* Adjust padding for buttons on mobile */
+  }
+
+  /* Adjust font sizes for better readability on mobile */
+  .contact-left h2 {
+    font-size: 1.8rem;
+  }
+
+  .contact-right p {
+    font-size: 0.9rem;
+  }
+
+  .info-item {
+    flex-direction: column;
+    align-items: flex-start; /* Stack info items vertically */
+    gap: 10px;
+  }
+
+  .info-item img {
+    width: 25px;
+    height: 25px; /* Reduce icon size for mobile */
+  }
+
+  /* Adjust margins and paddings for mobile */
+  .contact {
+    padding: 40px 5%;
+  }
+
+  .contact-right {
+    min-width: 100%;
   }
 }
 
