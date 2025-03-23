@@ -1,0 +1,380 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #0d0d0d;
+    color: #ffffff;
+    line-height: 1.6;
+  }
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  section {
+    padding: 60px 10%;
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10%;
+    align-items: center;
+    background: #0d0d0d;
+  }
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  .navbar nav a {
+    margin: 0 15px;
+    color: #aaa;
+  }
+  .hire-btn {
+    background: #9f47ff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  /* Home */
+  .home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(120deg, #1f0036, #290e5e);
+  }
+  .home-content {
+    flex: 1;
+  }
+  .home-content h1 {
+    font-size: 3rem;
+    margin: 20px 0;
+  }
+  .home-content .description {
+    margin-bottom: 20px;
+  }
+  .buttons .btn {
+    margin-right: 10px;
+    margin-bottom: 20px;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 20px;
+  }
+  .download {
+    background: #9f47ff;
+    color: white;
+  }
+  .explore {
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+  }
+  .socials a {
+    margin-right: 15px;
+    display: inline-block;
+  }
+  .home-image img {
+    border-radius: 20px;
+    max-width: 75%; 
+    height: auto; 
+    margin: 0 auto; 
+    display: block; 
+  }
+  
+/* About Section */
+.about {
+  padding: 60px 10%;
+  color: white;
+  background-color: #0d0d0d;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Header and Description Side-by-Side */
+.about-container {
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+.about-text {
+  flex-shrink: 0;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.about-description {
+  max-width: 800px;
+  margin-left: 100px;
+}
+
+.about-description p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+  text-align: justify;
+}
+
+/* Stats Section */
+.stats {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.stats div {
+  flex: 1;
+  min-width: 150px;
+}
+
+.stats div strong {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .about-description {
+    max-width: 100%;
+  }
+
+  .stats {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Skills Section */
+.skills {
+  padding: 60px 10%;
+  background: #0d0d0d;
+  color: white;
+}
+
+.skills-wrapper {
+  display: flex;
+  justify-content: center;       /* Center everything inside */
+  align-items: flex-start;
+  gap: 60px;                     /* Reduce this if still too far */
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  padding: 40px 20px;
+}
+
+.skills-right {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  max-width: 700px;           
+  margin: 0 auto;             
+}
+
+.skills-left {
+  flex: 1;
+  min-width: 200px;
+}
+
+.skills-left h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.see-more-btn {
+  display: inline-block;
+  padding: 8px 14px;
+  border: 1px solid #fff;
+  border-radius: 8px;
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+}
+
+.see-more-btn:hover {
+  background: white;
+  color: #0d0d0d;
+}
+
+.skills-right {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* Skill Item Layout */
+.skill-item {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.skill-item img {
+  width: 40px;
+  height: 40px;
+}
+
+.skill-item h4 {
+  font-size: 1.1rem;
+  margin: 0 0 5px;
+}
+
+.skill-item p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #ccc;
+}
+  
+  /* Work */
+  .work .project {
+    text-align: center;
+  }
+  .work img {
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  /* Contact */
+  .contact {
+    padding: 60px 10%;
+    background-color: #0d0d0d;
+    color: white;
+  }
+  
+  .contact-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  
+  /* Left Side: Form */
+  .contact-left {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .contact-left h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .contact-left form {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .contact-left form input,
+  .contact-left form textarea {
+    padding: 10px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #555;
+    color: white;
+    font-size: 1rem;
+  }
+  
+  .contact-left form textarea {
+    grid-column: span 2;
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  .contact-left form button {
+    grid-column: span 2;
+    background: #9f47ff;
+    padding: 12px;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  /* Right Side: Info */
+  .contact-right {
+    flex: 1;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .contact-right p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  
+  .info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  
+  .info-item img {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .info-item small {
+    color: #aaa;
+    font-size: 0.8rem;
+  }
+  
+  .info-item strong {
+    font-weight: 600;
+  }
+
+  @media (max-width: 768px) {
+    .contact-wrapper {
+      flex-direction: column;
+    }
+  
+    .contact-left form {
+      grid-template-columns: 1fr;
+    }
+  
+    .contact-left form button {
+      grid-column: span 1;
+    }
+  }
+  
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 30px 10%;
+    background: #111;
+    color: #aaa;
+  }
+  .footer nav a {
+    margin: 0 10px;
+    color: #aaa;
+  }
+  
