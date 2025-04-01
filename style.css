@@ -472,6 +472,70 @@ section {
   }
 }
 
+/* Ongoing Project Section */
+#project-ongoing {
+  max-width: 1000px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+#project-ongoing .section-title {
+  font-size: 2.2rem;
+  color: #fff;
+  margin-bottom: 50px;
+  text-align: center;
+  font-weight: bold;
+}
+
+#project-ongoing .item {
+  display: flex;
+  align-items: center;
+  /* center-align text with image */
+  margin-bottom: 50px;
+  gap: 30px;
+  flex-wrap: wrap;
+  /* mobile-friendly */
+}
+
+#project-ongoing .project-image {
+  width: 160px;
+  height: auto;
+  max-height: 220px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+#project-ongoing .project-image:hover {
+  transform: scale(1.03);
+  transition: transform 0.3s ease;
+}
+
+#project-ongoing .project-title {
+  font-size: 1.3rem;
+  color: #fff;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+#project-ongoing .text {
+  flex: 1;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #ddd;
+  max-width: 700px;
+}
+
+@media (min-width: 768px) {
+  #project-ongoing .project-image {
+    width: 250px;
+    max-height: 300px;
+  }
+
+  #project-ongoing .text {
+    font-size: 1.15rem;
+  }
+}
+
 /* Achievements Section */
 .achievements {
   padding: 60px 10%;
@@ -536,7 +600,8 @@ section {
   flex: 1;
   min-width: 300px;
   max-width: 100%;
-  padding-right: 15px; /* Added right padding for form alignment */
+  padding-right: 15px;
+  /* Added right padding for form alignment */
 }
 
 .contact-left h2 {
@@ -558,7 +623,8 @@ section {
   border-bottom: 1px solid #555;
   color: white;
   font-size: 1rem;
-  width: 100%; /* Ensure inputs take up the full width */
+  width: 100%;
+  /* Ensure inputs take up the full width */
 }
 
 .contact-left form textarea {
@@ -614,20 +680,24 @@ section {
 
 /* Mobile Styles */
 @media (max-width: 768px) {
+
   /* Stacking content vertically for mobile */
   .contact-wrapper {
     flex-direction: column;
-    align-items: center; /* Center align the sections on mobile */
+    align-items: center;
+    /* Center align the sections on mobile */
   }
 
   /* Adjust form layout */
   .contact-left form {
-    grid-template-columns: 1fr; /* Stack input fields in a single column */
+    grid-template-columns: 1fr;
+    /* Stack input fields in a single column */
   }
 
   .contact-left form button {
     grid-column: span 1;
-    padding: 12px 20px; /* Adjust padding for buttons on mobile */
+    padding: 12px 20px;
+    /* Adjust padding for buttons on mobile */
   }
 
   /* Adjust font sizes for better readability on mobile */
@@ -641,7 +711,8 @@ section {
 
   .info-item {
     flex-direction: column;
-    align-items: flex-start; /* Stack info items vertically */
+    align-items: flex-start;
+    /* Stack info items vertically */
     gap: 10px;
   }
 
@@ -675,6 +746,7 @@ section {
 
 /* Mobile Styles */
 @media (max-width: 768px) {
+
   /* Adjust padding for mobile */
   .footer {
     padding: 20px 5%;
@@ -683,11 +755,14 @@ section {
   /* Ensure links stay horizontal and wrap if needed */
   .footer nav {
     display: flex;
-    justify-content: center; /* Center align the links */
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: center;
+    /* Center align the links */
+    flex-wrap: wrap;
+    /* Allow wrapping on smaller screens */
   }
 
   .footer nav a {
-    margin: 5px 10px; /* Slightly reduced margin to accommodate space */
+    margin: 5px 10px;
+    /* Slightly reduced margin to accommodate space */
   }
 }
