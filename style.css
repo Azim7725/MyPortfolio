@@ -50,7 +50,6 @@ section {
   color: #aaa;
 }
 
-/* Hire Button */
 .hire-btn {
   background: #9f47ff;
   color: white;
@@ -134,6 +133,10 @@ section {
   color: white;
 }
 
+.download:hover {
+  scale: 1.05;
+}
+
 .explore {
   background: transparent;
   border: 1px solid white;
@@ -141,9 +144,17 @@ section {
   cursor: pointer;
 }
 
+.explore:hover {
+  scale: 1.05;
+}
+
 .socials a {
   margin-right: 15px;
   display: inline-block;
+}
+
+.socials a:hover{
+  scale: 1.15;
 }
 
 .home-image img {
@@ -364,6 +375,10 @@ section {
   height: 40px;
 }
 
+.skill-item img:hover{
+  scale: 1.2;
+}
+
 .skill-item h4 {
   font-size: 1.1rem;
   margin: 0 0 5px;
@@ -525,14 +540,22 @@ section {
   max-width: 700px;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 767px) {
+  #project-ongoing .item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
   #project-ongoing .project-image {
-    width: 250px;
-    max-height: 300px;
+    width: 80%;
+    max-width: 300px;
+    margin-bottom: 20px;
   }
 
   #project-ongoing .text {
-    font-size: 1.15rem;
+    text-align: left;
+    padding: 0 10px;
   }
 }
 
